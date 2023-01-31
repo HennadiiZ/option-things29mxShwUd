@@ -1,5 +1,11 @@
+import MeetupList from '../components/MeetupList/MeetupList';
+
 const AllMeetupsPage = () => {
-  return <p>All Meetups</p>
+  return (
+    <sectiont>
+      <MeetupList />
+    </sectiont>
+  );
 };
 
 export default AllMeetupsPage;
