@@ -1,0 +1,7 @@
+const MainNavigationPage = () => {
+  return (
+    <p>All Meetups</p>
+  );
+};
+
+export default MainNavigationPage;
