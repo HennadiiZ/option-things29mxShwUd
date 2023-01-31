@@ -1,5 +1,7 @@
+import NewMeetupForm from '../components/NewMeetupForm/NewMeetupForm';
+
 const NewMeetupPage = () => {
-  return <p>New Meetup</p>
+  return <NewMeetupForm />
 };
 
 export default NewMeetupPage;
