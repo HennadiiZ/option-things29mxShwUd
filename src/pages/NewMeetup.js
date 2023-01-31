@@ -1,5 +1,5 @@
-const NewMeetup = () => {
-  return <p>NewMeetup</p>
+const NewMeetupPage = () => {
+  return <p>New Meetup</p>
 };
 
-export default NewMeetup;
+export default NewMeetupPage;

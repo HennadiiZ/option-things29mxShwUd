@@ -1,5 +1,5 @@
-const AllMeetups = () => {
-  return <p>AllMeetups</p>
+const AllMeetupsPage = () => {
+  return <p>All Meetups</p>
 };
 
-export default AllMeetups;
+export default AllMeetupsPage;
