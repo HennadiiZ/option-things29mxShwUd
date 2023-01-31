@@ -3,13 +3,19 @@ import classes from './MeetupItem.module.css';
 
 const MeetupItem = (props) => {
   return (
-    <div className={classes.item}>
-      <p>{props.title}</p>
+    <li className={classes.item}>
       <div className={classes.image}>
-          <img src={props.image} alt={props.title}></img>
+        <img src={props.image} alt={props.title}></img>
       </div>
-      <div>{props.description}</div>
-    </div>
+      <div className={classes.content}>
+        <h3>{props.title}</h3>
+        <address>{props.address}</address>
+        <p>{props.description}</p>
+      </div>
+      <div className={classes.actions}>
+        <button>To Favorites</button>
+      </div>
+    </li>
   );
 };
 
