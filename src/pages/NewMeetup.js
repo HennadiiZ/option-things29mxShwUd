@@ -1,7 +1,7 @@
 import NewMeetupForm from '../components/NewMeetupForm/NewMeetupForm';
 
 const NewMeetupPage = () => {
-  return <NewMeetupForm />
+  return <section><NewMeetupForm /></section>
 };
 
 export default NewMeetupPage;
