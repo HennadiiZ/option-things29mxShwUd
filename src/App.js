@@ -6,13 +6,14 @@ import AllMeetupsPage from './pages/AllMeetups';
 import NewMeetupPage from './pages/NewMeetup';
 import FavoritesPage from './pages/Favorites';
 import MainNavigationPage from './layout/MainNavigation';
+import Layout from './layout/Layout';
 
 function App() {
 
   return (
     <div>
       <MainNavigationPage />
-      <main>
+      <Layout>
         <Switch>
           <Route path='/' exact={true}>
             <AllMeetupsPage />
@@ -24,7 +25,7 @@ function App() {
             <FavoritesPage />
           </Route>
         </Switch>
-      </main>  
+      </Layout>  
     </div>
   );
 }
