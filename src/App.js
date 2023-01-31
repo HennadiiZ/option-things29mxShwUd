@@ -5,7 +5,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import AllMeetupsPage from './pages/AllMeetups';
 import NewMeetupPage from './pages/NewMeetup';
 import FavoritesPage from './pages/Favorites';
-import MainNavigationPage from './Layout/MainNavigation';
+import MainNavigationPage from './layout/MainNavigation';
 
 function App() {
 
