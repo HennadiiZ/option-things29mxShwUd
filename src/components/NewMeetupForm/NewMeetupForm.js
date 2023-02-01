@@ -9,18 +9,27 @@ const NewMeetupForm = () => {
   const addressInputRef = useRef();
   const descrInputRef = useRef();
 
-  const titleValue = titleInputRef.current.value;
-  const imageValue = imageInputRef.current.value;
-  const addressValue = addressInputRef.current.value;
-  const descrValue = descrInputRef.current.value;
 
-  const formHandler = () => {
-    return {
+
+  const formHandler = (e) => {
+    e.preventDefault();
+    const titleValue = titleInputRef.current.value;
+    const imageValue = imageInputRef.current.value;
+    const addressValue = addressInputRef.current.value;
+    const descrValue = descrInputRef.current.value;
+  
+    const formData = {
       titleValue: titleValue,
       imageValue:  imageValue, 
       addressValue: addressValue,
       descrValue: descrValue, 
     };
+
+    if (!formData) {
+      return;
+    }
+    console.log(formData);
+    return formData;
   };
 
   return (
