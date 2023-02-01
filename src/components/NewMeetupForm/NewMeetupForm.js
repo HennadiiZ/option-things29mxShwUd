@@ -1,6 +1,7 @@
 import classes from './NewMeetupForm.module.css';
 import Card from '../../UI/Card';
 import { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const NewMeetupForm = () => {
    
@@ -8,8 +9,7 @@ const NewMeetupForm = () => {
   const imageInputRef = useRef();
   const addressInputRef = useRef();
   const descrInputRef = useRef();
-
-
+  const history = useHistory();
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -29,6 +29,7 @@ const NewMeetupForm = () => {
       return;
     }
     console.log(formData);
+    history.push('/');
     return formData;
   };
 
