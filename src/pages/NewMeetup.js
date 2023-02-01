@@ -15,9 +15,8 @@ const NewMeetupPage = () => {
       }
     ).then(response => {
       console.log(response);
+      history.replace('/');
     });
-
-    history.push('/');
   };
 
   return <section><NewMeetupForm onAddMeetup={dataHandler}/></section>
