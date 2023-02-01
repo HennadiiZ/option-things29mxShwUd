@@ -7,18 +7,33 @@ const AllMeetupsPage = () => {
   const [loadedData, setLoadedData] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(`${URL}`)
     .then(response => {
       return response.json();
     })
     .then(data => {
-      setIsLoading(false)
+      setIsLoading(false);
 
-      if (data) {
-        setLoadedData(Object.values(data));
+      const meetups = [];
+
+      for (const key in data) {
+        const meetup = {
+          id: key,
+          ...data[key]
+        }
+
+        meetups.push(meetup);
+        // console.log('data[key]', data[key]);
       }
+      setLoadedData(meetups);
+      // console.log('mtps', meetups);
+
+      // if (data) {
+      //   setLoadedData(Object.values(data));
+      // }
     });
-  }, [setLoadedData]);
+  }, []);
 
   if (isLoading) {
     return (

@@ -20,7 +20,7 @@ const NewMeetupForm = (props) => {
       image:  imageValue, 
       address: addressValue,
       description: descrValue, 
-      id: Math.random()
+      // id: Math.random()
     };
 
     props.onAddMeetup(formData);
