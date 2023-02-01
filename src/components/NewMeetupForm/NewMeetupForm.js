@@ -16,10 +16,11 @@ const NewMeetupForm = (props) => {
     const descrValue = descrInputRef.current.value;
   
     const formData = {
-      titleValue: titleValue,
-      imageValue:  imageValue, 
-      addressValue: addressValue,
-      descrValue: descrValue, 
+      title: titleValue,
+      image:  imageValue, 
+      address: addressValue,
+      description: descrValue, 
+      id: Math.random()
     };
 
     props.onAddMeetup(formData);
