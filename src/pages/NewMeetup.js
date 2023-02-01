@@ -5,13 +5,15 @@ import { useHistory } from 'react-router-dom';
 const NewMeetupPage = () => {
   const history = useHistory();
 
-  const dataHandler = (formData) => {
-    
-    fetch(`${URL}`, {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {'Content-Type': 'application/json'}
-    }).then(response => {
+  const dataHandler = (formData) => { 
+    fetch(
+      `${URL}`, 
+      {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {'Content-Type': 'application/json'}
+      }
+    ).then(response => {
       console.log(response);
     });
 
