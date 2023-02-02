@@ -18,6 +18,8 @@ export const DataContextProviders = (props) => {
     });
   };
 
+//   localStorage.setItem('favs', JSON.stringify(userFavorites));
+
   const removeHandler = (itemId) => {
     setUserFavorites((prevFavItem) => {
       return prevFavItem.filter(item => item.id !== itemId);

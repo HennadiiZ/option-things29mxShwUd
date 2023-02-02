@@ -20,7 +20,10 @@ const MainNavigationPage = () => {
             <NavLink to='/new-meetup'>New Meetup</NavLink>
           </li>
           <li>
-            <NavLink to='/favorites'>Favorites {favCtx.totalFavorites}</NavLink>
+            <NavLink to='/favorites'>
+              Favorites
+              <span className={classes.badge}>{favCtx.totalFavorites}</span>
+            </NavLink>
           </li>
         </ul>
       </nav>
