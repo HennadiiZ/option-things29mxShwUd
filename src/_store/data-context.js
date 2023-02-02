@@ -12,13 +12,15 @@ export const DataContextProviders = (props) => {
 
   const [userFavorites, setUserFavorites] = useState([]);
 
+//   useEffect(() => {
+//     localStorage.setItem('items', JSON.stringify(userFavorites));
+//   }, [userFavorites]);
+
   const addHandler = (favItem) => {
     setUserFavorites((prevFavItem) => {
       return prevFavItem.concat(favItem);
     });
   };
-
-//   localStorage.setItem('favs', JSON.stringify(userFavorites));
 
   const removeHandler = (itemId) => {
     setUserFavorites((prevFavItem) => {
@@ -29,6 +31,9 @@ export const DataContextProviders = (props) => {
   const itemIsSelectedHandler = (itemId) => {
     return userFavorites.some(item => item.id === itemId);
   };
+
+  let localStorageItems = JSON.parse(localStorage.getItem('items'));
+  console.log(localStorageItems);
 
   const context= {
     favorites: userFavorites,
