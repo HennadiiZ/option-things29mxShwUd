@@ -3,8 +3,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 const DataContext = React.createContext({
   favorites: [],
   totalFavorites: 0,
-  add: () => {},
-  remove: () => {},
+  add: (favItem) => {},
+  remove: (id) => {},
+  selected: (id) => {}
 });
 
 export const DataContextProviders = (props) => {
@@ -32,6 +33,7 @@ export const DataContextProviders = (props) => {
     totalFavorites: userFavorites.length,
     add: addHandler,
     remove: removeHandler,
+    selected: itemIsSelectedHandler
   };
       
   return (
@@ -40,3 +42,5 @@ export const DataContextProviders = (props) => {
     </DataContext.Provider>
   );
 }
+
+export default DataContext;

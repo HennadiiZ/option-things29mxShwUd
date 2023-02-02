@@ -2,7 +2,12 @@ import MeetupList from '../components/MeetupList/MeetupList';
 import { URL } from '../constants/constants';
 import { useEffect, useState } from 'react';
 
+import { useContext } from 'react';
+import DataContext from '../_store/data-context';
+
 const AllMeetupsPage = () => {
+  const favCtx = useContext(DataContext);
+
   const [isLoading, setIsLoading] = useState(true);
   const [loadedData, setLoadedData] = useState([]);
 
@@ -24,16 +29,12 @@ const AllMeetupsPage = () => {
         }
 
         meetups.push(meetup);
-        // console.log('data[key]', data[key]);
+        // favCtx.favorites.push(meetup); //
       }
       setLoadedData(meetups);
-      // console.log('mtps', meetups);
-
-      // if (data) {
-      //   setLoadedData(Object.values(data));
-      // }
+      // setLoadedData(Object.values(data));
     });
-  }, []);
+  }, [favCtx.favorites]);
 
   if (isLoading) {
     return (

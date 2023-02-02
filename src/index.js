@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-
+import { DataContextProviders } from './_store/data-context';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -18,9 +18,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <DataContextProviders>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </DataContextProviders>
 );
 
 // ReactDOM.render(
